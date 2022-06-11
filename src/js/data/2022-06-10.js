@@ -4,7 +4,7 @@ dataSet[dataSetVersion] = {};
 dataSet[dataSetVersion].options = [
   {
     name: "Filter by School",
-    key: "series",
+    key: "school",
     tooltip: "Check this to restrict characters from certain school.",
     checked: false,
     sub: [
