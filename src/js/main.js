@@ -479,7 +479,7 @@ function result(imageNum = 3) {
   document.querySelector('.info').style.display = 'none';
 
   const header = '<div class="result head"><div class="left">Order</div><div class="right">Name</div></div>';
-  const timeStr = `This sorter was completed on ${new Date(timestamp + timeTaken).toString()} and took ${msToReadableTime(timeTaken)}. <a href="${location.protocol}//${sorterURL}">Do another sorter?</a>`;
+  const timeStr = `This sorter was completed on ${new Date(timestamp + timeTaken).toString()} and took ${msToReadableTime(timeTaken)}. <br><br> <button onClick="window.location.href="${location.protocol}//${sorterURL}"">Do another sorter</button>`;
   const imgRes = (char, num) => {
     const charName = reduceTextWidth(char.name, 'Arial 12px', 160);
     const charTooltip = char.name !== charName ? char.name : '';
