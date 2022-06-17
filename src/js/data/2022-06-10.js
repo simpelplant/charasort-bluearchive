@@ -839,14 +839,6 @@ dataSet[dataSetVersion].characterData = [
   },
   //--npc
   {
-    name: "Hatsune Miku",
-    img: "miku.jpg",
-    opts: {
-      school: ["Other"],
-    NPC: true
-    }
-  },
-  {
     name: "Arona",
     img: "arona.jpg",
     opts: {
