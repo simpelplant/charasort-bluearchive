@@ -1,3 +1,10 @@
+# charasort-bluearchive
+A web based character sorter for Blue Archive Based on [charasort](https://github.com/execfera/charasort) by execfera
+This project is the continuation of its [own fork](https://github.com/YudhaDev/charasort-bluearchive) because the maintainer told me to do so.
+
+https://ba-sort.netlify.app/
+
+
 # charasort
 A web based character sorter. Allows users to run through a manual merge sort of their favorite
 characters from a set.
@@ -8,7 +15,7 @@ characters from a set.
  * Shareable links of sorter results.
  * Versioning of sorter data - you may want to add characters and resources over time. Versioning keeps shareable links valid even if the base character data is changed.
  
-The version in this repo is built for characters from the [Blue Archive]([https://en.wikipedia.org/wiki/Touhou_Project](https://en.wikipedia.org/wiki/Blue_Archive))
+The version in this repo is built for characters from the [Blue Archive](https://en.wikipedia.org/wiki/Touhou_Project](https://en.wikipedia.org/wiki/Blue_Archive))
 game series, but the sorter can be easily edited to create any custom sorter desired.
 
 ## Related Sorters
