@@ -1,40 +1,44 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-size: 16px;
+  color: #415066;
+  background-color: #F0FAFC;
 }
 
 .container {
+  margin-top: 2em;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-top: 1em;
 }
 
 .progress {
-  margin: 1em auto;
+  margin-bottom: 1em;
   width: 500px;
   display: none;
 }
 
 .progressbar {
   position: relative;
-  width: 492px;
-  border: 1px solid black;
+  width: 490px;
+  border: 1px solid #80C1E3;
+  margin-top: 5px;
   padding: 3px;
-  margin: 2px 0px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 .progresstext {
   position: absolute;
   width: 492px;
-  margin: 3px 0px;
+  margin: 4px 0px;
   text-align: center;
   font-size: 0.7em;
 }
 
 .progressfill {
-  height: 20px;
-  background-color: lightgreen;
+  height: 21px;
+  background-color: #C5EEFE;
   width: 0%;
 }
 
@@ -47,15 +51,22 @@ body {
 }
 
 .button {
-  border: 1px solid black;
+  margin-left: 2px;
+  border: 1px solid #80C1E3;
+  border-radius: 5px;
   text-align: center;
   padding: 10%;
   grid-column: 2 / 3;
   cursor: pointer;
+  background-color: white;
 }
 
 .starting.start.button {
   grid-row: span 6;
+}
+
+.button:hover{
+  background-color: #F6E94B;
 }
 
 .starting.load.button {
@@ -118,28 +129,38 @@ body {
   cursor: pointer;
 }
 
+.sorter > .image:hover{
+  border: 1px solid #FACC2F;
+  box-shadow: 0 0 5px #FACC2F;
+}
+
 .sorter > .text {
   width: 120px;
   height: 60px;
   display: none;
+  color: white;
+  background-color: #2E4B73;
 }
 
 .sorter > .text > p {
-  margin: 0.5em 5px 0px;
+  margin: 0.7em 5px 0px;
   width: calc(100%-10px);
   text-align: center;
   font-size: 0.8em;
   line-height: 1.5em;
+  font-weight: bold;
 }
 
 .sorter > .left {
   grid-column: 1 / 2;
-  border: 1px solid #000000;
+  border: 1px solid #80C1E3;
+  border-radius: 5px;
 }
 
 .sorter > .right {
   grid-column: 3 / 4;
-  border: 1px solid #000000;
+  border: 1px solid #80C1E3;
+  border-radius: 5px;
 }
 
 .options {
@@ -160,7 +181,7 @@ label {
 }
 
 label:hover {
-  color: #990000;
+  color: #E64D6A;
 }
 
 .options > .large.option, .options > hr {
@@ -191,6 +212,7 @@ label:hover {
   align-content: flex-start;
   width: 80%;
   margin: 2em auto;
+  background-color: #F0FAFC;
 }
 
 @media all and (min-width: 600px) {
@@ -208,12 +230,13 @@ label:hover {
 }
 
 .result {
-  height: 15px;
+  height: 19px;
   margin-bottom: -1px;
   display: grid;
-  width: 211px;
+  width: 196px;
   grid-template-columns: repeat(2, 1fr);
-  border: 1px solid #000;
+  background-color: white;
+  border: 1px solid #80C1E3;
   margin-right: 5px;
 }
 
@@ -223,21 +246,23 @@ label:hover {
 
 .result.image img {
   height: 160px;
+  margin-top: -3px;
 }
 
 .result.spacer {
   height: 1px;
-  background-color: #000;
+  background-color: #2E4B73;
 }
 
 .result.head {
-  background-color: #000;
+  background-color: #2E4B73;
   color: #FFF;
+  font-weight: bold;
 }
 
 .result > .left {
-  width: 35px;
-  padding: 1px 3px 1px 0.5em;
+  width: 18px;
+  padding: 3px 3px 1px 0.5em;
   grid-column: 1 / 2;
   text-align: right;
 }
@@ -255,9 +280,9 @@ label:hover {
 
 .result > .right {
   width: 160px;
-  padding: 1px 0em 1px 0em;
+  padding: 3px 0em 0px 0em;
   grid-column: 2 / 3;
-  border-left: 1px solid #000;
+  border-left: 1px solid #80C1E3;
   text-align: center;
 }
 
@@ -271,16 +296,45 @@ label:hover {
 }
 
 a {
-  color: #990000;
+  color: #2450CF;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
 }
 
-a:hover {
-  color: #FF6600;
+a:hover, a:visited:hover {
+  color: #FA90A4;
 }
 
 a:visited {
-  color: #6600FF;
+  color: #9E42D1;
+}
+
+.restart-button:link, .restart-button:visited {
+  background-color: #AAE1F6;
+  color: #2E4B73;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #80C1E3;
+  display: inline-block;
+}
+
+a.restart-button:hover, a.restart-button:active{
+  color: #2E4B73;
+  background-color: #F6E94B;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+select {
+  background-color: white;
+  border: 1px solid #80C1E3;
+  border-radius: 5px;
+  color: #2E4B73;
+}
+
+hr{
+  border: 1px solid #597AAA;
 }
