@@ -110,7 +110,7 @@ function init() {
     const select = document.createElement('option');
     select.value = i;
     select.text = i;
-    if (i === 3) { select.selected = 'selected'; }
+    if (i === 5) { select.selected = 'selected'; }
     document.querySelector('.image.selector > select').insertAdjacentElement('beforeend', select);
   }
 
@@ -468,7 +468,7 @@ function progressBar(indicator, percentage) {
  * 
  * @param {number} [imageNum=3] Number of images to display. Defaults to 3.
  */
-function result(imageNum = 3) {
+function result(imageNum = 5) {
   document.querySelectorAll('.finished.button').forEach(el => el.style.display = 'block');
   document.querySelector('.image.selector').style.display = 'block';
   document.querySelector('.time.taken').style.display = 'block';
@@ -478,8 +478,8 @@ function result(imageNum = 3) {
   document.querySelector('.options').style.display = 'none';
   document.querySelector('.info').style.display = 'none';
 
-  const header = '<div class="result head"><div class="left">Order</div><div class="right">Name</div></div>';
-  const timeStr = `This sorter was completed on ${new Date(timestamp + timeTaken).toString()} and took ${msToReadableTime(timeTaken)}. <br><br> <button onClick="window.location.href="${location.protocol}//${sorterURL}"">Do another sorter</button>`;
+  const header = '<div class="result head"><div class="left">#</div><div class="right">Name</div></div>';
+  const timeStr = `This sorter was completed on ${new Date(timestamp + timeTaken).toString()} and took ${msToReadableTime(timeTaken)}. <br><br> <a class="restart-button" href="${location.protocol}//${sorterURL}">Do another sorter</a>`;
   const imgRes = (char, num) => {
     const charName = reduceTextWidth(char.name, 'Arial 12px', 160);
     const charTooltip = char.name !== charName ? char.name : '';
