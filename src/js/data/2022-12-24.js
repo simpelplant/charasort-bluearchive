@@ -426,6 +426,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Akeboshi Himari",
+    img: "himari.jpg",
+    opts: {
+      school: ["Millenium"]
+    }
+  },
+  {
     name: "Kakudate Karin",
     img: "karin.jpg",
     opts: {
@@ -435,6 +442,12 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Otose Kotama",
     img: "kotama.jpg",
+    opts: {
+      school: ["Millenium"]
+    }
+  },
+  name: "Toyomi Kotori",
+    img: "kotori.jpg",
     opts: {
       school: ["Millenium"]
     }
@@ -468,6 +481,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Ushio Noa",
+    img: "noa.jpg",
+    opts: {
+      school: ["Millenium"]
+    }
+  },
+  {
     name: "Otohana Sumire",
     img: "sumire.jpg",
     opts: {
@@ -491,20 +511,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Hanaoka Yuzu",
     img: "yuzu.jpg",
-    opts: {
-      school: ["Millenium"]
-    }
-  },
-  {
-    name: "Ushio Noa",
-    img: "noa.jpg",
-    opts: {
-      school: ["Millenium"]
-    }
-  },
-  {
-    name: "Akeboshi Himari",
-    img: "himari.jpg",
     opts: {
       school: ["Millenium"]
     }
@@ -558,15 +564,15 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Sashiro Tomoe",
-    img: "tomoe.jpg",
+    name: "Mayoi Shigure",
+    img: "shigure.jpg",
     opts: {
       school: ["RedWinter"]
     }
   },
   {
-    name: "Mayoi Shigure",
-    img: "shigure.jpg",
+    name: "Sashiro Tomoe",
+    img: "tomoe.jpg",
     opts: {
       school: ["RedWinter"]
     }
@@ -599,6 +605,13 @@ dataSet[dataSetVersion].characterData = [
 
   //Shanhaijing
   {
+    name: "Sunohara Kokona",
+    img: "kokona.jpg",
+    opts: {
+      school: ["Shanhaijing"]
+    }
+  },
+  {
     name: "Yakushi Saya",
     img: "saya.jpg",
     opts: {
@@ -618,13 +631,6 @@ dataSet[dataSetVersion].characterData = [
     opts: {
       school: ["Shanhaijing"],
       dupes: true
-    }
-  },
-  {
-    name: "Sunohara Kokona",
-    img: "kokona.jpg",
-    opts: {
-      school: ["Shanhaijing"]
     }
   },
   //--npc
@@ -736,6 +742,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Kyouyama Kazusa",
+    img: "kazusa.jpg",
+    opts: {
+      school: ["Trinity"]
+    }
+  },
+  {
     name: "Shimoe Koharu",
     img: "koharu.jpg",
     opts: {
@@ -801,13 +814,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Ihara Yoshimi",
     img: "yoshimi.jpg",
-    opts: {
-      school: ["Trinity"]
-    }
-  },
-  {
-    name: "Kyouyama Kazusa",
-    img: "kazusa.jpg",
     opts: {
       school: ["Trinity"]
     }
