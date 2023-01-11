@@ -819,6 +819,13 @@ dataSet[dataSetVersion].characterData = [
       school: ["Trinity"]
     }
   },
+  {
+    name: "Aomori Mine",
+    img: "mine.jpg",
+    opts: {
+      school: ["Trinity"]
+    }
+  },
   //--npc
   {
     name: "Yurizono Seia",
@@ -847,14 +854,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Utazumi Sakurako",
     img: "sakurako.jpg",
-    opts: {
-      school: ["Trinity"],
-    NPC: true
-    }
-  },
-  {
-    name: "Mine",
-    img: "mine.jpg",
     opts: {
       school: ["Trinity"],
     NPC: true
