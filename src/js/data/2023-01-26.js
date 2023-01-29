@@ -238,6 +238,14 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Satsuki",
+    img: "satsuki.jpg",
+    opts: {
+      school: ["Gehenna"],
+    NPC: true
+    }
+  },
+  {
     name: "Shimokura Megu",
     img: "megu.jpg",
     opts: {
@@ -635,6 +643,14 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   //--npc
+  {
+    name: "Kisaki",
+    img: "kisaki.jpg",
+    opts: {
+      school: ["Shanhaijing"],
+    NPC: true
+    }
+  },
   {
     name: "Rumi",
     img: "rumi.jpg",
