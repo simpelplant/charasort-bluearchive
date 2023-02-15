@@ -652,6 +652,14 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Mina",
+    img: "mina.jpg",
+    opts: {
+      school: ["Shanhaijing"],
+    NPC: true
+    }
+  },
+  {
     name: "Rumi",
     img: "rumi.jpg",
     opts: {
@@ -924,7 +932,7 @@ dataSet[dataSetVersion].characterData = [
   },
   //--npc
   {
-    name: "Ogata Kanna",
+    name: "Ogata sKanna",
     img: "kanna.jpg",
     opts: {
       school: ["Valkyrie"],
@@ -941,6 +949,14 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   //--npc
+  {
+    name: "Aoi",
+    img: "aoi.jpg",
+    opts: {
+      school: ["Other"],
+    NPC: true
+    }
+  },
   {
     name: "Arona",
     img: "arona.jpg",
