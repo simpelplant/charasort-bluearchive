@@ -1,4 +1,4 @@
-dataSetVersion = "2023-01-26"; // Change this when creating a new data set version. YYYY-MM-DD format.
+dataSetVersion = "2023-04-28"; // Change this when creating a new data set version. YYYY-MM-DD format.
 dataSet[dataSetVersion] = {};
 
 dataSet[dataSetVersion].options = [
@@ -217,6 +217,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Shimokura Megu",
+    img: "megu.jpg",
+    opts: {
+      school: ["Gehenna"]
+    }
+  },
+  {
     name: "Himuro Sena",
     img: "sena.jpg",
     opts: {
@@ -243,14 +250,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Satsuki",
     img: "satsuki.jpg",
-    opts: {
-      school: ["Gehenna"],
-    NPC: true
-    }
-  },
-  {
-    name: "Shimokura Megu",
-    img: "megu.jpg",
     opts: {
       school: ["Gehenna"],
     NPC: true
@@ -292,6 +291,13 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Kuda Izuna",
     img: "izuna.jpg",
+    opts: {
+      school: ["Hyakkiyako"]
+    }
+  },
+  {
+    name: "Kuwakamo Kaho",
+    img: "kaho.jpg",
     opts: {
       school: ["Hyakkiyako"]
     }
@@ -362,16 +368,8 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Kuwakamo Kaho",
-    img: "kaho.jpg",
-    opts: {
-      school: ["Hyakkiyako"],
-    NPC: true
-    }
-  },
-  {
-    name: "Umika",
-    img: "umika.jpg",
+    name: "Goryou Nagusa",
+    img: "nagusa.jpg",
     opts: {
       school: ["Hyakkiyako"],
     NPC: true
@@ -380,6 +378,21 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Kuzunoha",
     img: "kuzunoha.jpg",
+    opts: {
+      school: ["Hyakkiyako"],
+    NPC: true
+    }
+  },
+  {
+    name: "Goryou Nagusa",
+    img: "nagusa.jpg",
+    opts: {
+      school: ["Hyakkiyako"]
+    }
+  },
+  {
+    name: "Umika",
+    img: "umika.jpg",
     opts: {
       school: ["Hyakkiyako"],
     NPC: true
@@ -465,6 +478,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Kurosaki Koyuki",
+    img: "koyuki.jpg",
+    opts: {
+      school: ["Millenium"]
+    }
+  },
+  {
     name: "Konuri Maki",
     img: "maki.jpg",
     opts: {
@@ -507,6 +527,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Toki",
+    img: "toki.jpg",
+    opts: {
+      school: ["Millenium"]
+    }
+  },
+  {
     name: "Shiroishi Utaha",
     img: "utaha.jpg",
     opts: {
@@ -529,24 +556,8 @@ dataSet[dataSetVersion].characterData = [
   },
   //--npc
   {
-    name: "Kurosaki Koyuki",
-    img: "koyuki.jpg",
-    opts: {
-      school: ["Millenium"],
-    NPC: true
-    }
-  },
-  {
     name: "Tsukatsuki Rio",
     img: "rio.jpg",
-    opts: {
-      school: ["Millenium"],
-    NPC: true
-    }
-  },
-  {
-    name: "Toki",
-    img: "toki.jpg",
     opts: {
       school: ["Millenium"],
     NPC: true
@@ -814,8 +825,36 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Misono Mika",
+    img: "mika.jpg",
+    opts: {
+      school: ["Trinity"]
+    }
+  },
+  {
+    name: "Aomori Mine",
+    img: "mine.jpg",
+    opts: {
+      school: ["Trinity"]
+    }
+  },
+  {
+    name: "Kirifuji Nagisa",
+    img: "nagisa.jpg",
+    opts: {
+      school: ["Trinity"]
+    }
+  },
+  {
     name: "Yutori Natsu",
     img: "natsu.jpg",
+    opts: {
+      school: ["Trinity"]
+    }
+  },
+  {
+    name: "Utazumi Sakurako",
+    img: "sakurako.jpg",
     opts: {
       school: ["Trinity"]
     }
@@ -842,13 +881,6 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Misono Mika",
-    img: "mika.jpg",
-    opts: {
-      school: ["Trinity"]
-    }
-  },
-  {
     name: "Kensaki Tsurugi",
     img: "tsurugi.jpg",
     opts: {
@@ -869,41 +901,18 @@ dataSet[dataSetVersion].characterData = [
       school: ["Trinity"]
     }
   },
-  {
-    name: "Aomori Mine",
-    img: "mine.jpg",
-    opts: {
-      school: ["Trinity"]
-    }
-  },
   //--npc
-  {
-    name: "Yurizono Seia",
-    img: "seia.jpg",
-    opts: {
-      school: ["Trinity"],
-    NPC: true
-    }
-  },
-  {
-    name: "Kirifuji Nagisa",
-    img: "nagisa.jpg",
-    opts: {
-      school: ["Trinity"],
-    NPC: true
-    }
-  },
-  {
-    name: "Utazumi Sakurako",
-    img: "sakurako.jpg",
-    opts: {
-      school: ["Trinity"],
-    NPC: true
-    }
-  },
   {
     name: "Ichika",
     img: "ichika.jpg",
+    opts: {
+      school: ["Trinity"],
+    NPC: true
+    }
+  },
+  {
+    name: "Yurizono Seia",
+    img: "seia.jpg",
     opts: {
       school: ["Trinity"],
     NPC: true
@@ -927,6 +936,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Ogata Kanna",
+    img: "kanna.jpg",
+    opts: {
+      school: ["Valkyrie"]
+    }
+  },
+  {
     name: "Nakatsukasa Kirino",
     img: "kirino.jpg",
     opts: {
@@ -934,14 +950,6 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   //--npc
-  {
-    name: "Ogata sKanna",
-    img: "kanna.jpg",
-    opts: {
-      school: ["Valkyrie"],
-    NPC: true
-    }
-  },
 
   //Other
   {
@@ -953,7 +961,15 @@ dataSet[dataSetVersion].characterData = [
   },
   //--npc
   {
-    name: "Aoi",
+    name: "Kiyosumi Akira",
+    img: "akira.jpg",
+    opts: {
+      school: ["Other"],
+    NPC: true
+    }
+  },
+  {
+    name: "Oki Aoi",
     img: "aoi.jpg",
     opts: {
       school: ["Other"],
@@ -977,15 +993,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Shiranui Kaya",
-    img: "kaya.jpg",
-    opts: {
-      school: ["Other"],
-    NPC: true
-    }
-  },
-  {
-    name: "Mai",
+    name: "Kazemaki Mai",
     img: "mai.jpg",
     opts: {
       school: ["Other"],
@@ -1001,8 +1009,32 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Plana",
+    img: "plana.jpg",
+    opts: {
+      school: ["Other"],
+    NPC: true
+    }
+  },
+  {
+    name: "Komakaze Rabu",
+    img: "rabu.jpg",
+    opts: {
+      school: ["Other"],
+    NPC: true
+    }
+  },
+  {
     name: "Nanagami Rin",
     img: "rin.jpg",
+    opts: {
+      school: ["Other"],
+    NPC: true
+    }
+  },
+  {
+    name: "Shiroko Terror",
+    img: "shiroko_terror.jpg",
     opts: {
       school: ["Other"],
     NPC: true
@@ -1019,14 +1051,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Sora",
     img: "sora.jpg",
-    opts: {
-      school: ["Other"],
-    NPC: true
-    }
-  },
-  {
-    name: "Komakaze Rabu",
-    img: "rabu.jpg",
     opts: {
       school: ["Other"],
     NPC: true
