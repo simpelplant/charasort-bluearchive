@@ -296,7 +296,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Kuwakamo Kaho",
+    name: "Kuwakami Kaho",
     img: "kaho.jpg",
     opts: {
       school: ["Hyakkiyako"]
@@ -649,26 +649,24 @@ dataSet[dataSetVersion].characterData = [
       dupes: true
     }
   },
+  {
+    name: "Konoe Mina",
+    img: "mina.jpg",
+    opts: {
+      school: ["Shanhaijing"]
+    }
+  },
+  {
+    name: "Akeshiro Rumi",
+    img: "rumi.jpg",
+    opts: {
+      school: ["Shanhaijing"]
+    }
+  },
   //--npc
   {
     name: "Kisaki",
     img: "kisaki.jpg",
-    opts: {
-      school: ["Shanhaijing"],
-    NPC: true
-    }
-  },
-  {
-    name: "Mina",
-    img: "mina.jpg",
-    opts: {
-      school: ["Shanhaijing"],
-    NPC: true
-    }
-  },
-  {
-    name: "Rumi",
-    img: "rumi.jpg",
     opts: {
       school: ["Shanhaijing"],
     NPC: true
@@ -894,6 +892,13 @@ dataSet[dataSetVersion].characterData = [
       school: ["Trinity"]
     }
   },
+  {
+    name: "Uzawa Reisa",
+    img: "reisa.jpg",
+    opts: {
+      school: ["Trinity"]
+    }
+  },
   //--npc
   {
     name: "Ichika",
@@ -906,14 +911,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Yurizono Seia",
     img: "seia.jpg",
-    opts: {
-      school: ["Trinity"],
-    NPC: true
-    }
-  },
-  {
-    name: "Uzawa Reisa",
-    img: "reisa.jpg",
     opts: {
       school: ["Trinity"],
     NPC: true
