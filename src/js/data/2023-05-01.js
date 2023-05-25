@@ -384,13 +384,6 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Goryou Nagusa",
-    img: "nagusa.jpg",
-    opts: {
-      school: ["Hyakkiyako"]
-    }
-  },
-  {
     name: "Umika",
     img: "umika.jpg",
     opts: {
@@ -995,6 +988,14 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Kazemaki Mai",
     img: "mai.jpg",
+    opts: {
+      school: ["Other"],
+    NPC: true
+    }
+  },
+  {
+    name: "Shiranui Kaya",
+    img: "kaya.jpg",
     opts: {
       school: ["Other"],
     NPC: true
