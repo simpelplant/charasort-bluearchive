@@ -573,6 +573,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Yaumori Minori",
+    img: "minori.jpg",
+    opts: {
+      school: ["RedWinter"]
+    }
+  },
+  {
     name: "Amami Nodoka",
     img: "nodoka.jpg",
     opts: {
@@ -597,14 +604,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Himeki Meru",
     img: "meru.jpg",
-    opts: {
-      school: ["RedWinter"],
-    NPC: true
-    }
-  },
-  {
-    name: "Yaumori Minori",
-    img: "minori.jpg",
     opts: {
       school: ["RedWinter"],
     NPC: true
