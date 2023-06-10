@@ -712,7 +712,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Yukino",
+    name: "Shichido Yukino",
     img: "yukino.jpg",
     opts: {
       school: ["SRT"],
