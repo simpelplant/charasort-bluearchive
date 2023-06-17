@@ -1068,6 +1068,22 @@ dataSet[dataSetVersion].characterData = [
       school: ["Other"],
     NPC: true
     }
+  },
+  {
+    name: "Haine",
+    img: "haine.jpg",
+    opts: {
+      school: ["Other"],
+    NPC: true
+    }
+  },
+  {
+    name: "Sumomo",
+    img: "sumomo.jpg",
+    opts: {
+      school: ["Other"],
+    NPC: true
+    }
   }
 ];
 	
