@@ -1,4 +1,4 @@
-dataSetVersion = "2023-09-03"; // Change this when creating a new data set version. YYYY-MM-DD format.
+dataSetVersion = "2023-11-01"; // Change this when creating a new data set version. YYYY-MM-DD format.
 dataSet[dataSetVersion] = {};
 
 dataSet[dataSetVersion].options = [
@@ -22,11 +22,22 @@ dataSet[dataSetVersion].options = [
     ]
   },
   {
-    name: "Filter Non-Playable Character",
+    name: "Disable NPC Students",
     key: "NPC",
-    tooltip: "Check this to remove NPC characters (based on Japan Server).",
+    tooltip: "Check this to disable NPC characters (based on Japan Server).",
     checked: false
   },
+  {
+    name: "Disable Collab Character",
+    key: "collab",
+    tooltip: "Check this to disable collab characters (Hatsune Miku, Misaka Mikoto, etc.)",
+    checked: false
+  },
+  {
+    name: "Remove Duplicate Characters",
+    key: "dupes",
+    tooltip: "Check this to remove Duplicate characters (ex. Shun and Small Shun)."
+  }
   /*
   {
     name: "Remove Non-Girls",
@@ -34,11 +45,6 @@ dataSet[dataSetVersion].options = [
     tooltip: "Check this to remove all non-female characters."
   },
   */
-  {
-    name: "Remove Duplicate Characters",
-    key: "dupes",
-    tooltip: "Check this to remove Duplicate characters (ex. Shun and Small Shun)."
-  }
   
 ];
 
@@ -965,7 +971,32 @@ dataSet[dataSetVersion].characterData = [
     name: "Hatsune Miku",
     img: "miku.jpg",
     opts: {
-      school: ["Other"]
+      school: ["Other"],
+    collab: true
+    }
+  },
+  {
+	name: "Misaka Mikoto",
+    img: "misaka.jpg",
+    opts: {
+      school: ["Other"],
+    collab: true
+    }
+  },
+  {
+	name: "Shokuhou Misaki",
+    img: "shokuhou.jpg",
+    opts: {
+      school: ["Other"],
+    collab: true
+    }
+  },
+  {
+	name: "Saten Ruiko",
+    img: "saten.jpg",
+    opts: {
+      school: ["Other"],
+    collab: true
     }
   },
   //--npc
