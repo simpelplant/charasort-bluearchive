@@ -22,13 +22,19 @@ dataSet[dataSetVersion].options = [
     ]
   },
   {
-    name: "Disable NPC Students",
-    key: "NPC",
-    tooltip: "Check this to disable NPC characters (based on Japan Server).",
+    name: "Show Global-released only",
+    key: "notyetGlobal",
+    tooltip: "Check this to disable characters that haven't yet made an appearance on the global server.",
     checked: false
   },
   {
-    name: "Disable Collab Character",
+    name: "Disable NPC Charaters",
+    key: "NPC",
+    tooltip: "Check this to disable NPC characters.",
+    checked: false
+  },
+  {
+    name: "Disable Collab Characters",
     key: "collab",
     tooltip: "Check this to disable collab characters (Hatsune Miku, Misaka Mikoto, etc.)",
     checked: false
@@ -367,21 +373,24 @@ dataSet[dataSetVersion].characterData = [
     name: "Kadenokouji Yukari",
     img: "yukari.jpg",
     opts: {
-      school: ["Hyakkiyako"]
+      school: ["Hyakkiyako"],
+    notyetGlobal: true
     }
   },
   {
     name: "Kiryuu Kikyou",
     img: "kikyou.jpg",
     opts: {
-      school: ["Hyakkiyako"]
+      school: ["Hyakkiyako"],
+    notyetGlobal: true
     }
   },
   {
     name: "Fuwa Renge",
     img: "renge.jpg",
     opts: {
-      school: ["Hyakkiyako"]
+      school: ["Hyakkiyako"],
+    notyetGlobal: true
     }
   },
    //--npc
@@ -422,7 +431,8 @@ dataSet[dataSetVersion].characterData = [
     img: "arata.jpg",
     opts: {
       school: ["Hyakkiyako"],
-    NPC: true
+    NPC: true,
+    notyetGlobal: true
     }
   },
   {
@@ -430,7 +440,8 @@ dataSet[dataSetVersion].characterData = [
     img: "shuro.jpg",
     opts: {
       school: ["Hyakkiyako"],
-    NPC: true
+    NPC: true,
+    notyetGlobal: true
     }
   },
   {
@@ -438,7 +449,8 @@ dataSet[dataSetVersion].characterData = [
     img: "kokuriko.jpg",
     opts: {
       school: ["Hyakkiyako"],
-    NPC: true
+    NPC: true,
+    notyetGlobal: true
     }
   },
 
@@ -611,7 +623,8 @@ dataSet[dataSetVersion].characterData = [
     img: "rei.jpg",
     opts: {
       school: ["Millenium"],
-    NPC: true
+    NPC: true,
+    notyetGlobal: true
     }
   },
 
@@ -678,7 +691,8 @@ dataSet[dataSetVersion].characterData = [
     img: "takane.jpg",
     opts: {
       school: ["RedWinter"],
-    NPC: true
+    NPC: true,
+    notyetGlobal: true
     }
   },
   {
@@ -686,7 +700,8 @@ dataSet[dataSetVersion].characterData = [
     img: "yakumo.jpg",
     opts: {
       school: ["RedWinter"],
-    NPC: true
+    NPC: true,
+    notyetGlobal: true
     }
   },
 
@@ -774,15 +789,14 @@ dataSet[dataSetVersion].characterData = [
       school: ["SRT"]
     }
   },
-  //--npc
   {
     name: "Kazekura Moe",
     img: "moe.jpg",
     opts: {
       school: ["SRT"],
-    NPC: true
     }
   },
+  //--npc
   {
     name: "Shichido Yukino",
     img: "yukino.jpg",
@@ -1033,7 +1047,8 @@ dataSet[dataSetVersion].characterData = [
     img: "misaka.jpg",
     opts: {
       school: ["Other"],
-    collab: true
+    collab: true,
+    notyetGlobal: true
     }
   },
   {
@@ -1041,7 +1056,8 @@ dataSet[dataSetVersion].characterData = [
     img: "shokuhou.jpg",
     opts: {
       school: ["Other"],
-    collab: true
+    collab: true,
+    notyetGlobal: true
     }
   },
   {
@@ -1049,7 +1065,8 @@ dataSet[dataSetVersion].characterData = [
     img: "saten.jpg",
     opts: {
       school: ["Other"],
-    collab: true
+    collab: true,
+    notyetGlobal: true
     }
   },
   //--npc
@@ -1202,7 +1219,8 @@ dataSet[dataSetVersion].characterData = [
     img: "ein.jpg",
     opts: {
       school: ["Other"],
-    NPC: true
+    NPC: true,
+    notyetGlobal: true
     }
   },
   {
@@ -1210,7 +1228,8 @@ dataSet[dataSetVersion].characterData = [
     img: "ohr.jpg",
     opts: {
       school: ["Other"],
-    NPC: true
+    NPC: true,
+    notyetGlobal: true
     }
   },
   {
@@ -1218,7 +1237,8 @@ dataSet[dataSetVersion].characterData = [
     img: "sof.jpg",
     opts: {
       school: ["Other"],
-    NPC: true
+    NPC: true,
+    notyetGlobal: true
     }
   }
 ];
