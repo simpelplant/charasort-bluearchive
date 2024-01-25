@@ -28,7 +28,7 @@ dataSet[dataSetVersion].options = [
     checked: false
   },
   {
-    name: "Disable NPC Charaters",
+    name: "Disable NPC Characters",
     key: "NPC",
     tooltip: "Check this to disable NPC characters.",
     checked: false
