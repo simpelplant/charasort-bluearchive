@@ -249,23 +249,21 @@ dataSet[dataSetVersion].characterData = [
       school: ["Gehenna"]
     }
   },
-  //--npc
   {
-    name: "Ibuki",
+    name: "Tanga Ibuki",
     img: "ibuki.jpg",
     opts: {
-      school: ["Gehenna"],
-    NPC: true
+      school: ["Gehenna"]
     }
   },
   {
     name: "Hanuma Makoto",
     img: "makoto.jpg",
     opts: {
-      school: ["Gehenna"],
-    NPC: true
+      school: ["Gehenna"]
     }
   },
+  //--npc
   {
     name: "Satsuki",
     img: "satsuki.jpg",
