@@ -708,8 +708,7 @@ dataSet[dataSetVersion].characterData = [
     img: "takane.jpg",
     opts: {
       school: ["RedWinter"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
   {
@@ -717,8 +716,7 @@ dataSet[dataSetVersion].characterData = [
     img: "yakumo.jpg",
     opts: {
       school: ["RedWinter"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
 
