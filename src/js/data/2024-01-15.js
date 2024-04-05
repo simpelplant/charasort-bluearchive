@@ -387,6 +387,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
+    name: "Satohama Umika",
+    img: "umika.jpg",
+    opts: {
+      school: ["Hyakkiyako"]
+    }
+  },
+  {
     name: "Kadenokouji Yukari",
     img: "yukari.jpg",
     opts: {
@@ -430,14 +437,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Kuzunoha",
     img: "kuzunoha.jpg",
-    opts: {
-      school: ["Hyakkiyako"],
-      NPC: true
-    }
-  },
-  {
-    name: "Umika",
-    img: "umika.jpg",
     opts: {
       school: ["Hyakkiyako"],
       NPC: true
