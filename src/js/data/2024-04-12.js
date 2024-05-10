@@ -1061,8 +1061,7 @@ dataSet[dataSetVersion].characterData = [
     img: "misaka.jpg",
     opts: {
       school: ["Other"],
-      collab: true,
-      notyetGlobal: true
+      collab: true
     }
   },
   {
@@ -1070,8 +1069,7 @@ dataSet[dataSetVersion].characterData = [
     img: "shokuhou.jpg",
     opts: {
       school: ["Other"],
-      collab: true,
-      notyetGlobal: true
+      collab: true
     }
   },
   {
@@ -1079,8 +1077,7 @@ dataSet[dataSetVersion].characterData = [
     img: "saten.jpg",
     opts: {
       school: ["Other"],
-      collab: true,
-      notyetGlobal: true
+      collab: true
     }
   },
   //--npc
@@ -1282,5 +1279,14 @@ dataSet[dataSetVersion].characterData = [
       notyetGlobal: true
     }
   },
+  {
+    name: "Shiina Tsumugi",
+    img: "tsumugi.jpg",
+    opts: {
+      school: ["Other"],
+      NPC: true,
+      notyetGlobal: true
+    }
+  }
 ];
 	
