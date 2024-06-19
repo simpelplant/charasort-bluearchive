@@ -93,7 +93,7 @@ dataSet[dataSetVersion].characterData = [
   },
   //--npc
   {
-    name: "Yume",
+    name: "Kuchinashi Yume",
     img: "yume.jpg",
     opts: {
       school: ["Abydos"],
@@ -273,6 +273,13 @@ dataSet[dataSetVersion].characterData = [
       school: ["Gehenna"]
     }
   },
+  {
+    name: "Yozakura Kirara",
+    img: "kirara.jpg",
+    opts: {
+      school: ["Gehenna"]
+    }
+  },
   //--npc
   {
     name: "Satsuki",
@@ -285,14 +292,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Erika",
     img: "erika.jpg",
-    opts: {
-      school: ["Gehenna"],
-      NPC: true
-    }
-  },
-  {
-    name: "Kirara",
-    img: "kirara.jpg",
     opts: {
       school: ["Gehenna"],
       NPC: true
@@ -397,24 +396,21 @@ dataSet[dataSetVersion].characterData = [
     name: "Kadenokouji Yukari",
     img: "yukari.jpg",
     opts: {
-      school: ["Hyakkiyako"],
-      notyetGlobal: true
+      school: ["Hyakkiyako"]
     }
   },
   {
     name: "Kiryuu Kikyou",
     img: "kikyou.jpg",
     opts: {
-      school: ["Hyakkiyako"],
-      notyetGlobal: true
+      school: ["Hyakkiyako"]
     }
   },
   {
     name: "Fuwa Renge",
     img: "renge.jpg",
     opts: {
-      school: ["Hyakkiyako"],
-      notyetGlobal: true
+      school: ["Hyakkiyako"]
     }
   },
    //--npc
@@ -447,8 +443,7 @@ dataSet[dataSetVersion].characterData = [
     img: "arata.jpg",
     opts: {
       school: ["Hyakkiyako"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
   {
@@ -456,8 +451,7 @@ dataSet[dataSetVersion].characterData = [
     img: "shuro.jpg",
     opts: {
       school: ["Hyakkiyako"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
   {
@@ -465,8 +459,7 @@ dataSet[dataSetVersion].characterData = [
     img: "kokuriko.jpg",
     opts: {
       school: ["Hyakkiyako"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
 
@@ -1230,8 +1223,7 @@ dataSet[dataSetVersion].characterData = [
     img: "ein.jpg",
     opts: {
       school: ["Other"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
   {
@@ -1239,8 +1231,7 @@ dataSet[dataSetVersion].characterData = [
     img: "ohr.jpg",
     opts: {
       school: ["Other"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
   {
@@ -1248,8 +1239,7 @@ dataSet[dataSetVersion].characterData = [
     img: "sof.jpg",
     opts: {
       school: ["Other"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
   {
