@@ -632,8 +632,7 @@ dataSet[dataSetVersion].characterData = [
     img: "rei.jpg",
     opts: {
       school: ["Millenium"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
 
@@ -1039,6 +1038,13 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   //--npc
+  {
+    name: "Konoka",
+    img: "konoka.jpg",
+    opts: {
+      school: ["Valkyrie"]
+    }
+  },
 
   //Other
   {
