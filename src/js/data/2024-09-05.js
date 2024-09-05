@@ -27,25 +27,25 @@ dataSet[dataSetVersion].options = [
   {
     name: "Exclude Protagonists",
     key: "protag",
-    tooltip: "Check to remove player characters."
+    tooltip: "Check to remove player characters.",
     checked: false
   },	
   {
     name: "Girls Only",
     key: "notgirl",
-    tooltip: "Check to remove all non-female characters."
+    tooltip: "Check to remove all non-female characters.",
     checked: false
   },
   {
     name: "Boys Only",
     key: "notboy",
-    tooltip: "Check to remove all non-male characters."
+    tooltip: "Check to remove all non-male characters.",
     checked: false
   },
   {
     name: "Remove Duplicate Appearances",
     key: "dupes",
-    tooltip: "Check to condense multiple-appearances characters (ex. RF1 Melody and RFF Melody)."
+    tooltip: "Check to condense multiple-appearances characters (ex. RF1 Melody and RFF Melody).",
     checked: false
   },
 ];
