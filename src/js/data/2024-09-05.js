@@ -40,7 +40,7 @@ dataSet[dataSetVersion].characterData = [
   //RF1 protag
   {
     name: "Raguna",
-    img: "ayane.jpg",
+    img: "chara_rune1_1.png",
     opts: {
       game: ["rf1"]
     }
@@ -48,77 +48,77 @@ dataSet[dataSetVersion].characterData = [
  //RF1 girls
   {
     name: "Mist",
-    img: "ayane.jpg",
+    img: "chara_rune1_2.png",
     opts: {
       game: ["rf1"]
     }
   },
   {
     name: "Rosetta",
-    img: "ayane.jpg",
+    img: "chara_rune1_3.png",
     opts: {
       game: ["rf1"]
     }
   },
   {
     name: "Lara",
-    img: "ayane.jpg",
+    img: "chara_rune1_10.png",
     opts: {
       game: ["rf1"]
     }
   },
   {
     name: "Melody",
-    img: "ayane.jpg",
+    img: "chara_rune1_8.png",
     opts: {
       game: ["rf1"]
     }
   },
   {
     name: "Bianca",
-    img: "ayane.jpg",
+    img: "chara_rune1_9.png",
     opts: {
       game: ["rf1"]
     }
   },
   {
     name: "Tabatha",
-    img: "ayane.jpg",
+    img: "chara_rune1_5.png",
     opts: {
       game: ["rf1"]
     }
   },
   {
     name: "Felicity",
-    img: "ayane.jpg",
+    img: "chara_rune1_4.png",
     opts: {
       game: ["rf1"]
     }
   },
   {
     name: "Tori",
-    img: "ayane.jpg",
+    img: "chara_rune1_7.png",
     opts: {
       game: ["rf1"]
     }
   },
    {
     name: "Sharron",
-    img: "ayane.jpg",
+    img: "chara_rune1_6.png",
     opts: {
       game: ["rf1"]
     }
   },
   {
     name: "Mei",
-    img: "ayane.jpg",
+    img: "chara_rune1_11.png",
     opts: {
       game: ["rf1"]
     }
   },
   {
     name: "Lynette",
-    img: "ayane.jpg",
+    img: "chara_rune1_12.png",
     opts: {
       game: ["rf1"]
     }
