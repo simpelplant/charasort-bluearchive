@@ -6,7 +6,7 @@ dataSet[dataSetVersion].options = [
     name: "Filter by Game",
     key: "game",
     tooltip: "Check to restrict characters from a category.",
-    checked: false,
+    checked: true,
     sub: [
       { name: "Rune Factory", key: "rf1" },
       { name: "Rune Factory 2 (Gen1)", key: "rf2g1" },
@@ -46,7 +46,7 @@ dataSet[dataSetVersion].options = [
     name: "Remove Duplicate Appearances",
     key: "dupes",
     tooltip: "Check to condense multiple-appearances characters (ex. RF1 Melody and RFF Melody).",
-    checked: false
+    checked: true
   },
 ];
 
