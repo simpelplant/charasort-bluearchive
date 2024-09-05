@@ -1,42 +1,39 @@
-dataSetVersion = "2022-06-10"; // Change this when creating a new data set version. YYYY-MM-DD format.
+dataSetVersion = "2024-09-05"; // Change this when creating a new data set version. YYYY-MM-DD format.
 dataSet[dataSetVersion] = {};
 
 dataSet[dataSetVersion].options = [
   {
-    name: "Filter by School",
-    key: "school",
-    tooltip: "Check this to restrict characters from certain school.",
+    name: "Filter by Game",
+    key: "game",
+    tooltip: "Check to restrict characters from a category.",
     checked: false,
     sub: [
-      { name: "Abydos High School", key: "Abydos" },
-      { name: "Gehenna Academy", key: "Gehenna" },
-      { name: "Millennium Science School", key: "Millenium" },
-      { name: "Trinity General School", key: "Trinity" },
-      { name: "Hyakkiyako Alliance Academy", key: "Hyakkiyako" },
-      { name: "Shanhaijing Senior Secondary School", key: "Shanhaijing" },
-      { name: "Red Winter Federal Academy", key: "RedWinter" },
-      { name: "Valkyrie Police Academy", key: "Valkyrie" },
-      { name: "Arius Branch School", key: "Arius" },
-      { name: "SRT Special Academy", key: "SRT" },
-      { name: "Other", key: "Other" },
+      { name: "Rune Factory", key: "rf1" },
+      { name: "Rune Factory 2 (Gen1)", key: "rf2g1" },
+      { name: "Rune Factory 2 (Gen2)", key: "rf2g2" },
+      { name: "Rune Factory 3", key: "rf3" },
+      { name: "Rune Factory 4", key: "rf4" },
+      { name: "Rune Factory 5", key: "rf5" },
+      { name: "Rune Factory Frontier", key: "rff" },
+      { name: "Rune Factory Oceans", key: "rfo" },
     ]
   },
   {
-    name: "Filter Non-Playable Character",
+    name: "Marriageables Only",
     key: "NPC",
-    tooltip: "Check this to remove NPC characters (based on Japan Server).",
+    tooltip: "Check this to remove non-marriageable characters",
     checked: false
   },
   {
-    name: "Remove Non-Girls",
+    name: "Girls Only",
     key: "notgirl",
     tooltip: "Check this to remove all non-female characters."
   },
   {
-    name: "Remove Duplicate Characters",
-    key: "dupes",
-    tooltip: "Check this to remove Duplicate characters (ex. Shun and Small Shun)."
-  }
+    name: "Boys Only",
+    key: "notboy",
+    tooltip: "Check this to remove all non-male characters."
+  },
 ];
 
 dataSet[dataSetVersion].characterData = [
@@ -45,7 +42,7 @@ dataSet[dataSetVersion].characterData = [
     name: "Okusora Ayane",
     img: "ayane.jpg",
     opts: {
-      school: ["Abydos"]
+      game: ["RF1"]
     }
   },
   {
