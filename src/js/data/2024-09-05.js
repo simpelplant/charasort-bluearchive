@@ -123,24 +123,133 @@ dataSet[dataSetVersion].characterData = [
       game: ["rf1"]
     }
   },
-  //NPC
-  {
-    name: "Joumae Saori",
-    img: "saori.jpg",
-    opts: {
-      school: ["Arius"],
-    NPC: true
-    }
-  },
-
   //RF2 Protag
   {
     name: "Kyle",
-    img: "akari.jpg",
+    img: "chara_rune2_1.png",
     opts: {
       school: ["rf2g1"]
     }
   },
+  {
+    name: "Aaron",
+    img: "chara_rune2_9.png",
+    opts: {
+      school: ["rf2g2"]
+    }
+  },
+  {
+    name: "Aria",
+    img: "chara_rune2_10.png",
+    opts: {
+      school: ["rf2g2"]
+    }
+  },
+ //RF2 girls
+  {
+    name: "Mana",
+    img: "chara_rune2_2.png",
+    opts: {
+      game: ["rf2g1"]
+    }
+  },
+  {
+    name: "Julia",
+    img: "chara_rune2_3.png",
+    opts: {
+      game: ["rf2g1"]
+    }
+  },
+  {
+    name: "Alicia",
+    img: "chara_rune2_4.png",
+    opts: {
+      game: ["rf2g1"]
+    }
+  },
+  {
+    name: "Dorothy",
+    img: "chara_rune2_5.png",
+    opts: {
+      game: ["rf2g1"]
+    }
+  },
+  {
+    name: "Rosalind",
+    img: "chara_rune2_7.png",
+    opts: {
+      game: ["rf2g1"]
+    }
+  },
+  {
+    name: "Yue",
+    img: "chara_rune2_8.png",
+    opts: {
+      game: ["rf2g1"]
+    }
+  },
+  {
+    name: "Cecilia",
+    img: "chara_rune2_6.png",
+    opts: {
+      game: ["rf2g1"]
+    }
+  },
+ //RF2 gen2
+  {
+    name: "Sera",
+    img: "chara_rune2_11.png",
+    opts: {
+      school: ["rf2g2"]
+    }
+  },
+  {
+    name: "Serena",
+    img: "chara_rune2_11.png",
+    opts: {
+      school: ["rf2g2"]
+    }
+  },
+  {
+    name: "Orland",
+    img: "chara_rune2_12.png",
+    opts: {
+      school: ["rf2g2"]
+    }
+  },
+  {
+    name: "Leonel",
+    img: "chara_rune2_13.png",
+    opts: {
+      school: ["rf2g2"]
+    }
+  },  {
+    name: "Leann",
+    img: "chara_rune2_14.png",
+    opts: {
+      school: ["rf2g2"]
+    }
+  },
+  {
+    name: "Roy",
+    img: "chara_rune2_15.png",
+    opts: {
+      school: ["rf2g2"]
+    }
+  },
+  {
+    name: "Cammy",
+    img: "chara_rune2_16.png",
+    opts: {
+      school: ["rf2g2"]
+    }
+  },
+
+
+
+
+
+	
   {
     name: "Sora",
     img: "sora.jpg",
