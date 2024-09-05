@@ -46,7 +46,7 @@ dataSet[dataSetVersion].options = [
     name: "Remove Duplicate Appearances",
     key: "dupes",
     tooltip: "Check to condense multiple-appearances characters (ex. RF1 Melody and RFF Melody)."
-  }
+  },
 ];
 
 dataSet[dataSetVersion].characterData = [
