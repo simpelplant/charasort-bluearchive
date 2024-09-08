@@ -1042,7 +1042,8 @@ dataSet[dataSetVersion].characterData = [
     name: "Konoka",
     img: "konoka.jpg",
     opts: {
-      school: ["Valkyrie"]
+      school: ["Valkyrie"],
+      NPC: true
     }
   },
 
