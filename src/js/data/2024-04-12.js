@@ -1286,15 +1286,6 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Tacihbana Nozomi",
-    img: "nozomi.jpg",
-    opts: {
-      school: ["Other"],
-      NPC: true,
-      notyetGlobal: true
-    }
-  },
-  {
     name: "Professor Niyaniya",
     img: "prof-niyaniya.jpg",
     opts: {
