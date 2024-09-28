@@ -155,7 +155,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Hinomia Chinatsu",
+    name: "Hinomiya Chinatsu",
     img: "chinatsu.jpg",
     opts: {
       school: ["Gehenna"]
@@ -472,7 +472,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Tendou Alice",
+    name: "Tendou Aris",
     img: "aris.jpg",
     opts: {
       school: ["Millenium"]
@@ -591,14 +591,14 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Toki",
+    name: "Asuma Toki",
     img: "toki.jpg",
     opts: {
       school: ["Millenium"]
     }
   },
   {
-    name: "Shiroishi Utaha",
+    name: "Shiraishi Utaha",
     img: "utaha.jpg",
     opts: {
       school: ["Millenium"]
@@ -652,7 +652,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Yaumori Minori",
+    name: "Yasumori Minori",
     img: "minori.jpg",
     opts: {
       school: ["RedWinter"]
@@ -964,7 +964,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Endo Shimiko",
+    name: "Endou Shimiko",
     img: "shimiko.jpg",
     opts: {
       school: ["Trinity"]
@@ -978,7 +978,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Kensaki Tsurugi",
+    name: "Kenzaki Tsurugi",
     img: "tsurugi.jpg",
     opts: {
       school: ["Trinity"]
@@ -992,7 +992,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Ihara Yoshimi",
+    name: "Ibaragi Yoshimi",
     img: "yoshimi.jpg",
     opts: {
       school: ["Trinity"]
