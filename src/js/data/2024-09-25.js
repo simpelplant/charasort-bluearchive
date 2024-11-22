@@ -280,21 +280,11 @@ dataSet[dataSetVersion].characterData = [
       school: ["Gehenna"]
     }
   },
-  //--npc
   {
     name: "Kyougoku Satsuki",
     img: "satsuki.jpg",
     opts: {
       school: ["Gehenna"],
-      NPC: true
-    }
-  },
-  {
-    name: "Erika",
-    img: "erika.jpg",
-    opts: {
-      school: ["Gehenna"],
-      NPC: true
     }
   },
   {
@@ -302,8 +292,15 @@ dataSet[dataSetVersion].characterData = [
     img: "chiaki.jpg",
     opts: {
       school: ["Gehenna"],
-      NPC: true,
-      notyetGlobal: true
+    }
+  },
+  //--npc
+  {
+    name: "Erika",
+    img: "erika.jpg",
+    opts: {
+      school: ["Gehenna"],
+      NPC: true
     }
   },
 
