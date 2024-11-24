@@ -280,30 +280,33 @@ dataSet[dataSetVersion].characterData = [
       school: ["Gehenna"]
     }
   },
-  {
-    name: "Kyougoku Satsuki",
-    img: "satsuki.jpg",
-    opts: {
-      school: ["Gehenna"]
-    }
-  },
-  {
-    name: "Motomiya Chiaki",
-    img: "chiaki.jpg",
-    opts: {
-      school: ["Gehenna"]
-    }
-  },
   //--npc
   {
-    name: "Hatami Erika",
+    name: "Satsuki",
+    img: "satsuki.jpg",
+    opts: {
+      school: ["Gehenna"],
+      NPC: true
+    }
+  },
+  {
+    name: "Erika",
     img: "erika.jpg",
     opts: {
       school: ["Gehenna"],
       NPC: true
     }
   },
-  
+  {
+    name: "Motomiya Chiaki",
+    img: "chiaki.jpg",
+    opts: {
+      school: ["Gehenna"],
+      NPC: true,
+      notyetGlobal: true
+    }
+  },
+
   //Hyakkiyako
   {
     name: "Waraku Chise",
