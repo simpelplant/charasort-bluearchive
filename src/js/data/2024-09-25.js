@@ -284,19 +284,19 @@ dataSet[dataSetVersion].characterData = [
     name: "Kyougoku Satsuki",
     img: "satsuki.jpg",
     opts: {
-      school: ["Gehenna"],
+      school: ["Gehenna"]
     }
   },
   {
     name: "Motomiya Chiaki",
     img: "chiaki.jpg",
     opts: {
-      school: ["Gehenna"],
+      school: ["Gehenna"]
     }
   },
   //--npc
   {
-    name: "Erika",
+    name: "Hatami Erika",
     img: "erika.jpg",
     opts: {
       school: ["Gehenna"],
