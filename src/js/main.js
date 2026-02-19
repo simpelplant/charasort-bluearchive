@@ -53,8 +53,114 @@ let totalBattles    = 0;
 let sorterURL       = window.location.host + window.location.pathname;
 let storedSaveType  = localStorage.getItem(`${sorterURL}_saveType`);
 
+/** @type {(strings: TemplateStringsArray, ...values: unknown[]) => string} */
+const t = (...args) => window.i18n.t(...args);
+/** @type {(message: string, ...values: unknown[]) => string} */
+const tr = (message, ...values) => window.i18n.tr(message, ...values);
+/** @type {(name: string, imagePath?: string) => string} */
+const mapCharacterName = (name, imagePath) => window.i18n.translateCharacterName(name, imagePath);
+/** @type {(name: string, schoolKey?: string) => string} */
+const mapSchoolName = (name, schoolKey) => window.i18n.translateSchoolName(name, schoolKey);
+
+/** @type {Record<string, string>} */
+const localeNames = {
+  en: 'English',
+  ja: '日本語',
+  ko: '한국어',
+};
+
+function setupLocaleSelector() {
+  const localeSelect = document.querySelector('.locale-select');
+  localeSelect.innerHTML = '';
+
+  window.i18n.supportedLocales.forEach((locale) => {
+    const option = document.createElement('option');
+    option.value = locale;
+    option.textContent = localeNames[locale] || locale;
+    localeSelect.insertAdjacentElement('beforeend', option);
+  });
+
+  localeSelect.value = window.i18n.getLocale();
+
+  localeSelect.addEventListener('change', async (event) => {
+    await window.i18n.setLocale(event.target.value);
+  });
+
+  window.i18n.onLocaleChange((locale) => {
+    localeSelect.value = locale;
+    applyStaticTranslations();
+    if (!timestamp || timeTaken) {
+      populateOptions();
+    }
+  });
+}
+
+function buildLoadButtonLabel() {
+  if (!storedSaveType) {
+    return t`Load`;
+  }
+
+  return t`Load ${tr(storedSaveType)}`;
+}
+
+/**
+ * @param {string} message
+ */
+function translateLineBreaks(message) {
+  return String(message).replace(/\n/g, '<br>');
+}
+
+function applyStaticTranslations() {
+  document.title = t`BA-Sorter`;
+  document.querySelector('.starting.start.button').innerHTML = `${translateLineBreaks(t`Blue Archive Character Sorter`)}<br><br>${t`Click to Start!`}`;
+  document.querySelector('.starting.load.button .load-button-label').textContent = buildLoadButtonLabel();
+  document.querySelector('.loading.button > span').textContent = t`Loading...`;
+  document.querySelector('.sorting.tie.button').textContent = t`Tie`;
+  document.querySelector('.sorting.undo.button').textContent = t`Undo`;
+  document.querySelector('.sorting.save.button').textContent = t`Save Progress`;
+  document.querySelector('.finished.save.button').textContent = t`Generate Result URL`;
+  document.querySelector('.finished.getimg.button').textContent = t`Generate Image`;
+  document.querySelector('.finished.list.button').textContent = t`Generate Text List`;
+  document.querySelector('.locale-label').textContent = t`Language:`;
+  document.querySelector('.clearsave').textContent = t`Clear Save Data`;
+  document.querySelector('.link-source-code').textContent = t`Source Code`;
+  document.querySelector('.link-based-on').textContent = t`Based on this project`;
+
+  const blueArchiveLink = `<a class="link-blue-archive" href="https://en.wikipedia.org/wiki/Blue_Archive" target="_blank">${t`Blue Archive`}</a>`;
+  document.querySelector('.info-intro').innerHTML = t`Sorter for ${blueArchiveLink} characters. Pick your sources, and hit the Start button.`;
+  document.querySelector('.info-options').innerHTML = `<strong>${t`Certain options have details that you can hover to read.`}</strong>`;
+  document.querySelector('.info-pick').textContent = t`Click on the character you like better from the two, or tie them if you like them equally or don't know them.`;
+  document.querySelector('.info-count').textContent = t`Depending on how many sources you pick, you'll get up to 700+ picks, so set aside a good few cups of tea for this.`;
+
+  document.querySelector('.info-keyboard-title').innerHTML = `<b>${t`Keyboard controls during sorting:`}</b>`;
+  document.querySelector('.info-keyboard-keys').innerHTML = `<b>${t`H (pick left) | J (undo) | K (tie) | L (pick right) | S (save progress)`}</b>`;
+
+  document.querySelector('.info-before-title').innerHTML = `<b>${t`Before sorting:`}</b>`;
+  document.querySelector('.info-before-keys').innerHTML = `<b>${t`S/Enter (start sorting) | L (load progress)`}</b>`;
+  document.querySelector('.info-before-note').textContent = t`1/2/3 always correspond to the first/second/third buttons.`;
+
+  document.querySelector('.info-latest-title').innerHTML = `<b>${t`Latest Changes (21 Jan 2026):`}</b>`;
+  document.querySelector('.info-latest-body').innerHTML = t`No longer npc: Kei<br>No longer jp only: Eri, Kanoe, Rena`;
+
+  const originalSiteLink = `<a class="link-original-site" href="http://mainyan.sakura.ne.jp/thsort.html" target="_blank">${t`this site`}</a>`;
+  const officialSiteLink = `<a class="link-official-site" href="https://bluearchive.nexon.com/home" target="_blank">${t`Blue Archive`}</a>`;
+  const nexonLink = `<a class="link-nexon" href="https://en.wikipedia.org/wiki/Nexon" target="_blank">${t`Nexon`}</a>`;
+  document.querySelector('.info-credit').innerHTML = t`Originally inspired by ${originalSiteLink} | ${officialSiteLink} by ${nexonLink}`;
+
+  const imageSelector = document.querySelector('.image.selector');
+  const imageSelectorControl = imageSelector.querySelector('select');
+  imageSelector.textContent = `${t`Display Images on Result`}: `;
+  if (imageSelectorControl) {
+    imageSelector.insertAdjacentElement('beforeend', imageSelectorControl);
+  }
+
+}
+
 /** Initialize script. */
-function init() {
+async function init() {
+  await window.i18n.initLocale();
+  setupLocaleSelector();
+  applyStaticTranslations();
 
   /** Define button behavior. */
   document.querySelector('.starting.start.button').addEventListener('click', start);
@@ -121,11 +227,11 @@ function init() {
 
   /** Show load button if save data exists. */
   if (storedSaveType) {
-    document.querySelector('.starting.load.button > span').insertAdjacentText('beforeend', storedSaveType);
     document.querySelectorAll('.starting.button').forEach(el => {
       el.style['grid-row'] = 'span 3';
       el.style.display = 'block';
     });
+    applyStaticTranslations();
   }
 
   setLatestDataset();
@@ -194,7 +300,7 @@ function start() {
   });
 
   if (characterDataToSort.length < 2) {
-    alert('Cannot sort with less than two characters. Please reselect.');
+    alert(t`Cannot sort with less than two characters. Please reselect.`);
     return;
   }
 
@@ -281,21 +387,22 @@ function display() {
   const leftChar        = characterDataToSort[leftCharIndex];
   const rightChar       = characterDataToSort[rightCharIndex];
 
-  const charNameDisp = name => {
-    const charName = reduceTextWidth(name, 'Arial 12.8px', 220);
-    const charTooltip = name !== charName ? name : '';
+  const charNameDisp = (name, imagePath) => {
+    const translatedName = mapCharacterName(name, imagePath);
+    const charName = reduceTextWidth(translatedName, 'Arial 12.8px', 220);
+    const charTooltip = translatedName !== charName ? translatedName : '';
     return `<p title="${charTooltip}">${charName}</p>`;
   };
 
-  progressBar(`Battle No. ${battleNo}`, percent);
+  progressBar(t`Battle No. ${battleNo}`, percent);
 
   document.querySelector('.left.sort.image').src = leftChar.img;
   document.querySelector('.right.sort.image').src = rightChar.img;
 
   
 
-  document.querySelector('.left.sort.text').innerHTML = charNameDisp(leftChar.name);
-  document.querySelector('.right.sort.text').innerHTML = charNameDisp(rightChar.name);
+  document.querySelector('.left.sort.text').innerHTML = charNameDisp(leftChar.name, leftChar.img);
+  document.querySelector('.right.sort.text').innerHTML = charNameDisp(rightChar.name, rightChar.img);
 
   /** Autopick if choice has been given. */
   if (choices.length !== battleNo - 1) {
@@ -424,7 +531,7 @@ function pick(sortType) {
   if (leftIndex < 0) {
     timeTaken = timeTaken || new Date().getTime() - timestamp;
 
-    progressBar(`Battle No. ${battleNo} - Completed!`, 100);
+    progressBar(t`Battle No. ${battleNo} - Completed!`, 100);
 
     result();
   } else {
@@ -478,16 +585,23 @@ function result(imageNum = 5) {
   document.querySelector('.options').style.display = 'none';
   document.querySelector('.info').style.display = 'none';
 
-  const header = '<div class="result head"><div class="left">#</div><div class="right">Name</div></div>';
-  const timeStr = `This sorter was completed on ${new Date(timestamp + timeTaken).toString()} and took ${msToReadableTime(timeTaken)}. <br><br> <a class="restart-button" href="${location.protocol}//${sorterURL}">Do another sorter</a>`;
+  const header = `<div class="result head"><div class="left">#</div><div class="right">${t`Name`}</div></div>`;
+  const completionDate = new Intl.DateTimeFormat(window.i18n.getLocale(), {
+    dateStyle: 'full',
+    timeStyle: 'long',
+  }).format(new Date(timestamp + timeTaken));
+  const timeSummary = t`This sorter was completed on ${completionDate} and took ${msToReadableTime(timeTaken)}.`;
+  const timeStr = `${timeSummary} <br><br> <a class="restart-button" href="${location.protocol}//${sorterURL}">${t`Do another sorter`}</a>`;
   const imgRes = (char, num) => {
-    const charName = reduceTextWidth(char.name, 'Arial 12px', 160);
-    const charTooltip = char.name !== charName ? char.name : '';
+    const translatedName = mapCharacterName(char.name, char.img);
+    const charName = reduceTextWidth(translatedName, 'Arial 12px', 160);
+    const charTooltip = translatedName !== charName ? translatedName : '';
     return `<div class="result image"><div class="left"><span>${num}</span></div><div class="right"><img src="${char.img}"><div><span title="${charTooltip}">${charName}</span></div></div></div>`;
   }
   const res = (char, num) => {
-    const charName = reduceTextWidth(char.name, 'Arial 12px', 160);
-    const charTooltip = char.name !== charName ? char.name : '';
+    const translatedName = mapCharacterName(char.name, char.img);
+    const charName = reduceTextWidth(translatedName, 'Arial 12px', 160);
+    const charTooltip = translatedName !== charName ? translatedName : '';
     return `<div class="result"><div class="left">${num}</div><div class="right"><span title="${charTooltip}">${charName}</span></div></div>`;
   }
 
@@ -510,7 +624,7 @@ function result(imageNum = 5) {
     } else {
       resultTable.insertAdjacentHTML('beforeend', res(character, rankNum));
     }
-    finalCharacters.push({ rank: rankNum, name: character.name });
+    finalCharacters.push({ rank: rankNum, name: mapCharacterName(character.name, character.img) });
 
     if (idx < characterDataToSort.length - 1) {
       if (tiedDataList[characterIndex] === finalSortedIndexes[idx + 1]) {
@@ -552,14 +666,16 @@ function undo() {
 */
 function saveProgress(saveType) {
   const saveData = generateSavedata();
+  storedSaveType = saveType;
 
   localStorage.setItem(`${sorterURL}_saveData`, saveData);
   localStorage.setItem(`${sorterURL}_saveType`, saveType);
+  applyStaticTranslations();
 
   if (saveType !== 'Autosave') {
     const saveURL = `${location.protocol}//${sorterURL}?${saveData}`;
-    const inProgressText = 'You may click Load Progress after this to resume, or use this URL.';
-    const finishedText = 'You may use this URL to share this result, or click Load Last Result to view it again.';
+    const inProgressText = t`You may click Load Progress after this to resume, or use this URL.`;
+    const finishedText = t`You may use this URL to share this result, or click Load Last Result to view it again.`;
 
     window.prompt(saveType === 'Last Result' ? finishedText : inProgressText, saveURL);
   }
@@ -585,6 +701,7 @@ function clearProgress() {
 
   document.querySelectorAll('.starting.start.button').forEach(el => el.style['grid-row'] = 'span 6');
   document.querySelectorAll('.starting.load.button').forEach(el => el.style.display = 'none');
+  applyStaticTranslations();
 }
 
 function generateImage() {
@@ -599,12 +716,12 @@ function generateImage() {
 
     imgButton.removeEventListener('click', generateImage);
     imgButton.innerHTML = '';
-    imgButton.insertAdjacentHTML('beforeend', `<a href="${dataURL}" download="${filename}">Download Image</a><br><br>`);
+    imgButton.insertAdjacentHTML('beforeend', `<a href="${dataURL}" download="${filename}">${t`Download Image`}</a><br><br>`);
 
-    resetButton.insertAdjacentText('beforeend', 'Reset');
+    resetButton.insertAdjacentText('beforeend', t`Reset`);
     resetButton.addEventListener('click', (event) => {
       imgButton.addEventListener('click', generateImage);
-      imgButton.innerHTML = 'Generate Image';
+      imgButton.innerHTML = t`Generate Image`;
       event.stopPropagation();
     });
     imgButton.insertAdjacentElement('beforeend', resetButton);
@@ -648,11 +765,11 @@ function setLatestDataset() {
 /** Populate option list. */
 function populateOptions() {
   const optList = document.querySelector('.options');
-  const optInsert = (name, id, tooltip, checked = true, disabled = false) => {
-    return `<div><label title="${tooltip?tooltip:name}"><input id="cb-${id}" type="checkbox" ${checked?'checked':''} ${disabled?'disabled':''}> ${name}</label></div>`;
+  const optInsert = (label, id, tooltip, checked = true, disabled = false) => {
+    return `<div><label title="${tooltip ? tr(tooltip) : label}"><input id="cb-${id}" type="checkbox" ${checked?'checked':''} ${disabled?'disabled':''}> ${label}</label></div>`;
   };
-  const optInsertLarge = (name, id, tooltip, checked = true) => {
-    return `<div class="large option"><label title="${tooltip?tooltip:name}"><input id="cbgroup-${id}" type="checkbox" ${checked?'checked':''}> ${name}</label></div>`;
+  const optInsertLarge = (label, id, tooltip, checked = true) => {
+    return `<div class="large option"><label title="${tooltip ? tr(tooltip) : label}"><input id="cbgroup-${id}" type="checkbox" ${checked?'checked':''}> ${label}</label></div>`;
   };
 
   /** Clear out any previous options. */
@@ -661,9 +778,12 @@ function populateOptions() {
   /** Insert sorter options and set grouped option behavior. */
   options.forEach(opt => {
     if ('sub' in opt) {
-      optList.insertAdjacentHTML('beforeend', optInsertLarge(opt.name, opt.key, opt.tooltip, opt.checked));
+      optList.insertAdjacentHTML('beforeend', optInsertLarge(tr(opt.name), opt.key, opt.tooltip, opt.checked));
       opt.sub.forEach((subopt, subindex) => {
-        optList.insertAdjacentHTML('beforeend', optInsert(subopt.name, `${opt.key}-${subindex}`, subopt.tooltip, subopt.checked, opt.checked === false));
+        const label = opt.key === 'school'
+          ? mapSchoolName(subopt.name, subopt.key)
+          : tr(subopt.name);
+        optList.insertAdjacentHTML('beforeend', optInsert(label, `${opt.key}-${subindex}`, subopt.tooltip, subopt.checked, opt.checked === false));
       });
       optList.insertAdjacentHTML('beforeend', '<hr>');
 
@@ -676,7 +796,7 @@ function populateOptions() {
         });
       });
     } else {
-      optList.insertAdjacentHTML('beforeend', optInsert(opt.name, opt.key, opt.tooltip, opt.checked));
+      optList.insertAdjacentHTML('beforeend', optInsert(tr(opt.name), opt.key, opt.tooltip, opt.checked));
     }
   });
 }
@@ -752,7 +872,7 @@ function decodeQuery(queryString = window.location.search.slice(1)) {
 
     successfulLoad = true;
   } catch (err) {
-    console.error(`Error loading shareable link: ${err}`);
+    console.error(t`Error loading shareable link: ${err}`);
     setLatestDataset(); // Restore to default function if loading link does not work.
   }
 
@@ -771,7 +891,7 @@ function preloadImages() {
     return new Promise((res, rej) => {
       const reader = new FileReader();
       reader.onload = ev => {
-        progressBar(`Loading Image ${++imagesLoaded}`, Math.floor(imagesLoaded * 100 / totalLength));
+        progressBar(t`Loading Image ${++imagesLoaded}`, Math.floor(imagesLoaded * 100 / totalLength));
         res(ev.target.result);
       };
       reader.onerror = rej;
@@ -790,25 +910,25 @@ function preloadImages() {
  * @param {number} milliseconds
  */
 function msToReadableTime (milliseconds) {
-  let t = Math.floor(milliseconds/1000);
-  const years = Math.floor(t / 31536000);
-  t = t - (years * 31536000);
-  const months = Math.floor(t / 2592000);
-  t = t - (months * 2592000);
-  const days = Math.floor(t / 86400);
-  t = t - (days * 86400);
-  const hours = Math.floor(t / 3600);
-  t = t - (hours * 3600);
-  const minutes = Math.floor(t / 60);
-  t = t - (minutes * 60);
+  let secondsRemaining = Math.floor(milliseconds / 1000);
+  const years = Math.floor(secondsRemaining / 31536000);
+  secondsRemaining = secondsRemaining - (years * 31536000);
+  const months = Math.floor(secondsRemaining / 2592000);
+  secondsRemaining = secondsRemaining - (months * 2592000);
+  const days = Math.floor(secondsRemaining / 86400);
+  secondsRemaining = secondsRemaining - (days * 86400);
+  const hours = Math.floor(secondsRemaining / 3600);
+  secondsRemaining = secondsRemaining - (hours * 3600);
+  const minutes = Math.floor(secondsRemaining / 60);
+  secondsRemaining = secondsRemaining - (minutes * 60);
   const content = [];
-	if (years) content.push(years + " year" + (years > 1 ? "s" : ""));
-	if (months) content.push(months + " month" + (months > 1 ? "s" : ""));
-	if (days) content.push(days + " day" + (days > 1 ? "s" : ""));
-	if (hours) content.push(hours + " hour"  + (hours > 1 ? "s" : ""));
-	if (minutes) content.push(minutes + " minute" + (minutes > 1 ? "s" : ""));
-	if (t) content.push(t + " second" + (t > 1 ? "s" : ""));
-  return content.slice(0,3).join(', ');
+  if (years) content.push(t`${years} year${years > 1 ? 's' : ''}`);
+  if (months) content.push(t`${months} month${months > 1 ? 's' : ''}`);
+  if (days) content.push(t`${days} day${days > 1 ? 's' : ''}`);
+  if (hours) content.push(t`${hours} hour${hours > 1 ? 's' : ''}`);
+  if (minutes) content.push(t`${minutes} minute${minutes > 1 ? 's' : ''}`);
+  if (secondsRemaining) content.push(t`${secondsRemaining} second${secondsRemaining > 1 ? 's' : ''}`);
+  return content.slice(0, 3).join(', ');
 }
 
 /**

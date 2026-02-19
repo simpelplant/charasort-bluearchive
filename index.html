@@ -1,4 +1,4 @@
-<html>
+<html lang="en">
 
 <head>
   <link rel="shortcut icon" href="src/assets/daisuki.ico" type="image/x-icon">
@@ -19,6 +19,7 @@
   <script src="src/js/html2canvas.min.js"></script>
   <script src="src/js/lz-string.min.js"></script>
   <script src="src/js/seedrandom.min.js"></script>
+  <script src="src/js/i18n.js"></script>
   <script src="src/js/main.js"></script>
 </head>
 
@@ -33,10 +34,10 @@
     </div>
 
     <div class="sorter">
-        <img src="src/assets/defaultL.jpg" class="left sort image" role="button">
+        <img src="src/assets/defaultL.jpg" class="left sort image" role="button" alt="Left character choice">
 
         <div class="starting start button">Blue Archive Character Sorter<br><br>Click to Start!</div>
-        <div class="starting load button">Load <span></span></div>
+        <div class="starting load button"><span class="load-button-label">Load</span></div>
 
         <div class="loading button"><div></div><span>Loading...</span></div>
 
@@ -48,46 +49,47 @@
         <div class="finished getimg button">Generate Image</div>
         <div class="finished list button">Generate Text List</div>
 
-        <img src="src/assets/defaultR.jpg" class="right sort image" role="button">
+        <img src="src/assets/defaultR.jpg" class="right sort image" role="button" alt="Right character choice">
 
         <div class="left sort text"><p></p></div>
         <div class="right sort text"><p></p></div>
     </div>
 
     <div class="options"></div>
+    <div class="locale selector"><label class="locale-label">Language:</label> <select class="locale-select"></select></div>
     <div class="image selector">Display Images on Result: </div>
     <div class="time taken"></div>
     <div class="results"></div>
 
     <div class="info">
-        <a href="https://github.com/simpelplant/charasort-bluearchive" target="_blank">Source Code</a> | <a href="https://github.com/execfera/charasort/" target="_blank">Based on this project</a> | <a class="clearsave">Clear Save Data</a>
+        <a class="link-source-code" href="https://github.com/simpelplant/charasort-bluearchive" target="_blank">Source Code</a> | <a class="link-based-on" href="https://github.com/execfera/charasort/" target="_blank">Based on this project</a> | <a class="clearsave">Clear Save Data</a>
         
         <br><br>
 
-        <p>Sorter for <a href="https://en.wikipedia.org/wiki/Blue_Archive" target="_blank">Blue Archive</a> characters. Pick your sources, and hit the Start button.</p>
-        <p><strong>Certain options have details that you can hover to read.</strong></p>
-        <p>Click on the character you like better from the two, or tie them if you like them equally or don't know them.</p>
-        <p>Depending on how many sources you pick, you'll get up to 700+ picks, so set aside a good few cups of tea for this.</p>
+        <p class="info-intro">Sorter for <a class="link-blue-archive" href="https://en.wikipedia.org/wiki/Blue_Archive" target="_blank">Blue Archive</a> characters. Pick your sources, and hit the Start button.</p>
+        <p class="info-options"><strong>Certain options have details that you can hover to read.</strong></p>
+        <p class="info-pick">Click on the character you like better from the two, or tie them if you like them equally or don't know them.</p>
+        <p class="info-count">Depending on how many sources you pick, you'll get up to 700+ picks, so set aside a good few cups of tea for this.</p>
 
         <br>
 		
-        <p><b>Keyboard controls during sorting:</b></p>
-        <p><b>H (pick left) | J (undo) | K (tie) | L (pick right) | S (save progress)</b></p>
-        <br>
+		<p class="info-keyboard-title"><b>Keyboard controls during sorting:</b></p>
+		<p class="info-keyboard-keys"><b>H (pick left) | J (undo) | K (tie) | L (pick right) | S (save progress)</b></p>
+		<br>
         
-        <p><b>Before sorting:</b></p>
-        <p><b>S/Enter (start sorting) | L (load progress)</b></p>
-        <p>1/2/3 always correspond to the first/second/third buttons.</p>
-        <br>
+		<p class="info-before-title"><b>Before sorting:</b></p>
+		<p class="info-before-keys"><b>S/Enter (start sorting) | L (load progress)</b></p>
+		<p class="info-before-note">1/2/3 always correspond to the first/second/third buttons.</p>
+		<br>
         
-         <p><b>Latest Changes (21 Jan 2026):</b></p>
-         <p>
+		 <p class="info-latest-title"><b>Latest Changes (21 Jan 2026):</b></p>
+		 <p class="info-latest-body">
 			No longer npc: Kei
 			No longer jp only: Eri, Kanoe, Rena
          </p>
         
 		<hr style="width:61%">
-        <p>Originally inspired by <a href="http://mainyan.sakura.ne.jp/thsort.html" target="_blank">this site</a> | <a href="https://bluearchive.nexon.com/home" target="_blank">Blue Archive</a> by <a href="https://en.wikipedia.org/wiki/Nexon" target="_blank">Nexon</a>
+		<p class="info-credit">Originally inspired by <a class="link-original-site" href="http://mainyan.sakura.ne.jp/thsort.html" target="_blank">this site</a> | <a class="link-official-site" href="https://bluearchive.nexon.com/home" target="_blank">Blue Archive</a> by <a class="link-nexon" href="https://en.wikipedia.org/wiki/Nexon" target="_blank">Nexon</a></p>
     </div>
 </div>
 </body>

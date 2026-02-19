@@ -172,6 +172,17 @@ body {
   width: 450px;
 }
 
+.locale.selector {
+  margin-top: 0.5em;
+  width: 500px;
+  text-align: center;
+  font-size: 0.75em;
+}
+
+.locale.selector label {
+  margin-right: 0.4em;
+}
+
 .options > div {
   font-size: 0.5625em;
 }
