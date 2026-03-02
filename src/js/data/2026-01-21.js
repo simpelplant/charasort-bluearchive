@@ -93,6 +93,14 @@ dataSet[dataSetVersion].characterData = [
       school: ["Abydos"]
     }
   },
+	  {
+    name: "Shiroko Terror",
+    img: "shiroko_terror.jpg",
+    opts: {
+      school: ["abydos"],
+      dupes: true
+    }
+  },
   //--npc
   {
     name: "Kuchinashi Yume",
@@ -136,7 +144,6 @@ dataSet[dataSetVersion].characterData = [
     img: "subaru.jpg",
     opts: {
       school: ["Arius"],
-      notyetGlobal: true
     }
   },
   //--npc
@@ -145,8 +152,7 @@ dataSet[dataSetVersion].characterData = [
     img: "maia.jpg",
     opts: {
       school: ["Arius"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
 
@@ -821,7 +827,14 @@ dataSet[dataSetVersion].characterData = [
       NPC: true
     }
   },
-
+	{
+    name: "Shintani Kai",
+    img: "kai.jpg",
+    opts: {
+      school: ["Shanhaijing"],
+      NPC: true
+	},
+		
   //SRT
   {
     name: "Tsukiyuki Miyako",
@@ -1272,15 +1285,7 @@ dataSet[dataSetVersion].characterData = [
     opts: {
       school: ["Other"],
       NPC: true
-    }
-  },
-  {
-    name: "Shintani Kai",
-    img: "kai.jpg",
-    opts: {
-      school: ["Other"],
-      NPC: true
-    }
+	}
   },
   {
     name: "Shiranui Kaya",
@@ -1317,14 +1322,6 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Nanagami Rin",
     img: "rin.jpg",
-    opts: {
-      school: ["Other"],
-      NPC: true
-    }
-  },
-  {
-    name: "Shiroko Terror",
-    img: "shiroko_terror.jpg",
     opts: {
       school: ["Other"],
       NPC: true
