@@ -97,6 +97,7 @@ dataSet[dataSetVersion].characterData = [
     img: "shiroko_terror.jpg",
     opts: {
       school: ["Abydos"]
+		dupes: true
     }
   },
   //--npc
@@ -316,14 +317,12 @@ dataSet[dataSetVersion].characterData = [
     opts: {
       school: ["Gehenna"]
     }
-  },
-  //--npc
+  }
   {
     name: "Hatami Erika",
     img: "erika.jpg",
     opts: {
       school: ["Gehenna"],
-      NPC: true
     }
   },
 
@@ -679,7 +678,6 @@ dataSet[dataSetVersion].characterData = [
     img: "kei.jpg",
     opts: {
       school: ["Millenium"],
-      notyetGlobal: true
     }
   },
   //--npc
@@ -798,7 +796,7 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   {
-    name: "Sunohara Shun (kid)",
+    name: "Sunohara Shun (small)",
     img: "shun_kid.jpg",
     opts: {
       school: ["Shanhaijing"],
