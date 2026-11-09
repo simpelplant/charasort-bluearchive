@@ -147,7 +147,7 @@ dataSet[dataSetVersion].characterData = [
   },
   //--npc
   {
-    name: "Tachiki Maia",
+    name: "Tachigi Maia",
     img: "maia.jpg",
     opts: {
       school: ["Arius"],
@@ -684,7 +684,7 @@ dataSet[dataSetVersion].characterData = [
   },
   //--npc
   {
-    name: "Mirai",
+    name: "Azuma Mirai",
     img: "mirai.jpg",
     opts: {
       school: ["Millenium"],
@@ -773,7 +773,30 @@ dataSet[dataSetVersion].characterData = [
     }
   },
   //--npc
-  
+  {
+    name: "Niki Erina",
+    img: "erina.jpg",
+    opts: {
+      school: ["RedWinter"],
+      NPC: true
+    }
+  },
+  {
+    name: "Niki Anna",
+    img: "anna.jpg",
+    opts: {
+      school: ["RedWinter"],
+      NPC: true
+    }
+  },
+  {
+    name: "Furuhata Rana",
+    img: "rana.jpg",
+    opts: {
+      school: ["RedWinter"],
+      NPC: true
+    }
+  },
 
   //Shanhaijing
   {
@@ -845,6 +868,14 @@ dataSet[dataSetVersion].characterData = [
   {
     name: "Shintani Kai",
     img: "kai.jpg",
+    opts: {
+      school: ["Shanhaijing"],
+      NPC: true
+    }
+  },
+  {
+    name: "Miyauchi Kanae",
+    img: "kanae.jpg",
     opts: {
       school: ["Shanhaijing"],
       NPC: true
@@ -1127,7 +1158,7 @@ dataSet[dataSetVersion].characterData = [
   },
   //--npc
   {
-    name: "Misuzu",
+    name: "Kanbara Misuzu",
     img: "misuzu.jpg",
     opts: {
       school: ["Valkyrie"],
