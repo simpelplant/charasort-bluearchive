@@ -702,8 +702,7 @@ dataSet[dataSetVersion].characterData = [
     name: "Tendou Kei",
     img: "kei.jpg",
     opts: {
-      school: ["Millenium"],
-      notyetGlobal: true
+      school: ["Millenium"]
     }
   },
   //--npc
@@ -721,7 +720,6 @@ dataSet[dataSetVersion].characterData = [
     opts: {
       school: ["Millenium"],
       NPC: true,
-      notyetGlobal: true
     }
   },
 
@@ -800,21 +798,24 @@ dataSet[dataSetVersion].characterData = [
     name: "Niki Erina",
     img: "erina.jpg",
     opts: {
-      school: ["RedWinter"]
+      school: ["RedWinter"],
+      notyetGlobal: true
     }
   },
   {
     name: "Niki Anna",
     img: "anna.jpg",
     opts: {
-      school: ["RedWinter"]
+      school: ["RedWinter"],
+      notyetGlobal: true
     }
   },
   {
     name: "Furuhata Rana",
     img: "rana.jpg",
     opts: {
-      school: ["RedWinter"]
+      school: ["RedWinter"],
+      notyetGlobal: true
     }
   },
   //--npc
@@ -1184,8 +1185,7 @@ dataSet[dataSetVersion].characterData = [
     img: "misuzu.jpg",
     opts: {
       school: ["Valkyrie"],
-      NPC: true,
-      notyetGlobal: true
+      NPC: true
     }
   },
 
@@ -1294,14 +1294,16 @@ dataSet[dataSetVersion].characterData = [
     name: "Fuchigami Kotone",
     img: "kotone.jpg",
     opts: {
-      school: ["Odyssey"]
+      school: ["Odyssey"],
+      notyetGlobal: true
     }
   },
   {
     name: "Toumi Kokoro",
     img: "kokoro.jpg",
     opts: {
-      school: ["Odyssey"]
+      school: ["Odyssey"],
+      notyetGlobal: true
     }
   },
   //--npc
@@ -1310,7 +1312,8 @@ dataSet[dataSetVersion].characterData = [
     img: "minato.jpg",
     opts: {
       school: ["Odyssey"],
-      NPC: true
+      NPC: true,
+      notyetGlobal: true
     }
   },
   {
@@ -1318,7 +1321,8 @@ dataSet[dataSetVersion].characterData = [
     img: "ami.jpg",
     opts: {
       school: ["Odyssey"],
-      NPC: true
+      NPC: true,
+      notyetGlobal: true
     }
   },
   {
@@ -1326,7 +1330,8 @@ dataSet[dataSetVersion].characterData = [
     img: "sayuri.jpg",
     opts: {
       school: ["Odyssey"],
-      NPC: true
+      NPC: true,
+      notyetGlobal: true
     }
   },
   {
@@ -1334,7 +1339,8 @@ dataSet[dataSetVersion].characterData = [
     img: "makina.jpg",
     opts: {
       school: ["Odyssey"],
-      NPC: true
+      NPC: true,
+      notyetGlobal: true
     }
   },
   {
@@ -1342,7 +1348,8 @@ dataSet[dataSetVersion].characterData = [
     img: "mitsuki.jpg",
     opts: {
       school: ["Odyssey"],
-      NPC: true
+      NPC: true,
+      notyetGlobal: true
     }
   },
   {
@@ -1350,7 +1357,8 @@ dataSet[dataSetVersion].characterData = [
     img: "sanae.jpg",
     opts: {
       school: ["Odyssey"],
-      NPC: true
+      NPC: true,
+      notyetGlobal: true
     }
   },
   {
@@ -1366,7 +1374,8 @@ dataSet[dataSetVersion].characterData = [
     img: "nanami.jpg",
     opts: {
       school: ["Odyssey"],
-      NPC: true
+      NPC: true,
+      notyetGlobal: true
     }
   },
   
